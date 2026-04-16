@@ -58,7 +58,7 @@ function ExperienceSection() {
                 <img
                   src={jeremySessionGroup}
                   alt="Jeremy Yau facilitating a group music therapy session"
-                  className="h-72 w-full object-cover"
+                  className="h-72 w-full object-cover object-[center_18%]"
                 />
               </div>
 
