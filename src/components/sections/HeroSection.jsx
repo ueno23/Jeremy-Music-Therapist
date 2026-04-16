@@ -1,7 +1,6 @@
 import { ArrowRight, CalendarHeart } from "lucide-react";
 import Reveal from "../ui/Reveal";
-// Replace with Jeremy's professional photo in src/assets/images when available.
-import heroPlaceholder from "../../assets/images/hero-placeholder.svg";
+import jeremyHero from "../../assets/images/jeremy-hero.JPG";
 
 function HeroSection() {
   return (
@@ -61,8 +60,8 @@ function HeroSection() {
             <div className="glass-panel relative overflow-hidden rounded-[2.5rem] p-4">
               <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white/70 to-transparent dark:from-white/8" />
               <img
-                src={heroPlaceholder}
-                alt="Placeholder portrait for Jeremy Yau"
+                src={jeremyHero}
+                alt="Jeremy Yau, Registered Music Therapist"
                 className="h-full w-full rounded-[2rem] object-cover"
               />
             </div>

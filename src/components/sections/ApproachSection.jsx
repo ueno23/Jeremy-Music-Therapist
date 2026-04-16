@@ -1,6 +1,8 @@
 import { CirclePlay, Guitar, MicVocal, Piano, Waves } from "lucide-react";
 import Reveal from "../ui/Reveal";
 import SectionHeading from "../ui/SectionHeading";
+import practiceRoomDrums from "../../assets/images/practice-room-drums.jpg";
+import practiceRoomGuitar from "../../assets/images/practice-room-guitar.jpg";
 
 const approachItems = [
   { icon: MicVocal, label: "Voice and singing" },
@@ -23,24 +25,43 @@ function ApproachSection() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {approachItems.map((item) => {
-              const Icon = item.icon;
+          <div className="grid gap-4">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="glass-panel overflow-hidden rounded-[2rem] p-3">
+                <img
+                  src={practiceRoomDrums}
+                  alt="Music therapy room arranged with drums and instruments"
+                  className="h-56 w-full rounded-[1.4rem] object-cover"
+                />
+              </div>
+              <div className="glass-panel overflow-hidden rounded-[2rem] p-3">
+                <img
+                  src={practiceRoomGuitar}
+                  alt="Therapy room setup with guitar, keyboard, and visual supports"
+                  className="h-56 w-full rounded-[1.4rem] object-cover"
+                />
+              </div>
+            </div>
 
-              return (
-                <div
-                  key={item.label}
-                  className="glass-panel rounded-[1.8rem] p-5"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ocean-50 text-ocean-700 dark:bg-ocean-500/15 dark:text-ocean-100">
-                    <Icon size={22} aria-hidden="true" />
+            <div className="grid gap-4 sm:grid-cols-2">
+              {approachItems.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <div
+                    key={item.label}
+                    className="glass-panel rounded-[1.8rem] p-5"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ocean-50 text-ocean-700 dark:bg-ocean-500/15 dark:text-ocean-100">
+                      <Icon size={22} aria-hidden="true" />
+                    </div>
+                    <p className="mt-4 text-sm font-semibold leading-7 text-ink-900 dark:text-white">
+                      {item.label}
+                    </p>
                   </div>
-                  <p className="mt-4 text-sm font-semibold leading-7 text-ink-900 dark:text-white">
-                    {item.label}
-                  </p>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </Reveal>
       </div>

@@ -1,7 +1,6 @@
 import Reveal from "../ui/Reveal";
 import SectionHeading from "../ui/SectionHeading";
-// Replace with Jeremy's friendly portrait in src/assets/images when available.
-import portraitPlaceholder from "../../assets/images/portrait-placeholder.svg";
+import jeremySessionHome from "../../assets/images/jeremy-session-home.jpg";
 
 const focusAreas = [
   "Adult disability support",
@@ -27,8 +26,8 @@ function AboutSection() {
           <div className="relative mx-auto max-w-lg">
             <div className="glass-panel overflow-hidden rounded-[2.5rem] p-4">
               <img
-                src={portraitPlaceholder}
-                alt="Placeholder friendly portrait for Jeremy Yau"
+                src={jeremySessionHome}
+                alt="Jeremy Yau playing guitar during a home-based music therapy session"
                 className="h-full w-full rounded-[2rem] object-cover"
               />
             </div>

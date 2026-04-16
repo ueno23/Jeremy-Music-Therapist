@@ -1,6 +1,7 @@
 import { BadgeCheck, BriefcaseBusiness, GraduationCap } from "lucide-react";
 import Reveal from "../ui/Reveal";
 import SectionHeading from "../ui/SectionHeading";
+import jeremySessionGroup from "../../assets/images/jeremy-session-group.JPG";
 
 const credentials = [
   "Registered Music Therapist (RMT)",
@@ -53,6 +54,14 @@ function ExperienceSection() {
         <Reveal delay={0.08}>
           <div className="glass-panel h-full rounded-[2.6rem] p-8">
             <div className="grid gap-5">
+              <div className="overflow-hidden rounded-[2rem]">
+                <img
+                  src={jeremySessionGroup}
+                  alt="Jeremy Yau facilitating a group music therapy session"
+                  className="h-72 w-full object-cover"
+                />
+              </div>
+
               <div>
                 <div className="flex items-center gap-3">
                   <BriefcaseBusiness className="text-sky-700 dark:text-sky-100" />
