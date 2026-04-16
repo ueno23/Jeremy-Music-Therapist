@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Fraunces", serif;
+  --color-sand-50: #f8f6f1;
+  --color-sand-100: #f1ede2;
+  --color-sand-200: #e5dcc9;
+  --color-ocean-50: #eef8f8;
+  --color-ocean-100: #d5eceb;
+  --color-ocean-200: #b4dddb;
+  --color-ocean-300: #80c3c0;
+  --color-ocean-500: #3d8f8f;
+  --color-ocean-700: #245f63;
+  --color-sky-100: #dfeff7;
+  --color-sky-200: #bfdcec;
+  --color-sky-400: #72aeca;
+  --color-sky-700: #315e7a;
+  --color-ink-900: #16313e;
+  --color-ink-800: #254553;
+  --color-ink-700: #42616d;
+  --color-ink-100: #edf4f5;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink-900);
+  background:
+    radial-gradient(circle at top left, rgba(114, 174, 202, 0.18), transparent 32%),
+    radial-gradient(circle at top right, rgba(128, 195, 192, 0.22), transparent 28%),
+    linear-gradient(180deg, #fbfaf7 0%, #f7f4ee 100%);
+  min-height: 100vh;
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at top left, rgba(61, 143, 143, 0.22), transparent 30%),
+    radial-gradient(circle at top right, rgba(49, 94, 122, 0.2), transparent 25%),
+    linear-gradient(180deg, #10232d 0%, #152a34 100%);
+  color: #ebf5f5;
+}
+
+::selection {
+  background: rgba(114, 174, 202, 0.28);
+}
+
+.section-shell {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.glass-panel {
+  @apply border border-white/50 bg-white/80 shadow-[0_18px_50px_rgba(36,95,99,0.08)] backdrop-blur;
+}
+
+.dark .glass-panel {
+  @apply border-white/10 bg-white/5 shadow-[0_18px_50px_rgba(0,0,0,0.24)];
+}
+
+.eyebrow {
+  @apply inline-flex items-center rounded-full border border-ocean-200 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-ocean-700;
+}
+
+.dark .eyebrow {
+  @apply border-ocean-300/30 bg-white/5 text-ocean-100;
+}
+
+.input-base {
+  @apply w-full rounded-2xl border border-sand-200 bg-white/80 px-4 py-3 text-sm text-ink-900 outline-none transition duration-200 placeholder:text-ink-700/60 focus:border-sky-400 focus:ring-4 focus:ring-sky-100;
+}
+
+.dark .input-base {
+  @apply border-white/10 bg-white/5 text-white placeholder:text-white/50 focus:border-ocean-300 focus:ring-ocean-500/20;
+}
